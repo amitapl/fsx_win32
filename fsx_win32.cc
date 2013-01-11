@@ -104,4 +104,4 @@ void init(Handle<Object> target) {
 	target->Set(String::NewSymbol("listDir"),
 		FunctionTemplate::New(Method)->GetFunction());
 }
-NODE_MODULE(hello, init)
+NODE_MODULE(fsx_win32, init)
