@@ -72,7 +72,7 @@ Handle<Value> Method(const Arguments& args) {
 			FileTimeToSystemTime(&(ffd.ftLastWriteTime), &stUTC);
 			SystemTimeToTzSpecificLocalTime(NULL, &stUTC, &stLocal);
 
-			sprintf(modifiedTimeStr, "%02d/%02d/%d %02d:%02d:%02d", stLocal.wMonth, stLocal.wDay, stLocal.wYear, stLocal.wHour, stLocal.wMinute, stLocal.wSecond);
+			sprintf(modifiedTimeStr, "%02d/%02d/%d %02d:%02d:%02d.%03d", stLocal.wMonth, stLocal.wDay, stLocal.wYear, stLocal.wHour, stLocal.wMinute, stLocal.wSecond, stLocal.wMilliseconds);
 
 			sprintf(sizeStr, "%ld", filesize.QuadPart);
 
